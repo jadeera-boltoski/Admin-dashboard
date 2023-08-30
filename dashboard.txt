@@ -1,0 +1,141 @@
+Admin dashboard--------Angular project-----work flow
+
+
+------------------------------------------------------
+
+1-create project----------ng new admin-dashboard
+2-run project--------------ng server/s (in project folder)
+3-install third party libraries
+        -angular material
+            first we import api in app.module.ts 
+
+4.to use any component from material copy the api from perticular component and paste into app module
+
+
+dependency injection
+    classes thammil data share
+    router class evda ndaagua?-----
+            evdaaahno import cheythe avde kaanikkum aah class nte address
+            and router class from 
+            already angular lu lle class ahnu athu
+            angular-> node module->angular->index.ts
+
+how to publish?
+    first do in that comment in readme build section and get a index that will be the content you want to publish
+
+5.generate component
+   - header
+   - footer 
+   - sidebar
+   - dashboard
+       - card
+       - area
+       - tablepie-chart
+
+           - employee
+           - gallery
+           - contact
+           - leads
+
+
+download htmltagwrap oru saanam koode ndu like auto nthoo
+
+data communication bwtween parent and child class
+@output------------ output decreator---------------child to parent data communication
+
+parent to child data communication-----input decarotor-----@input
+parent lu child nte selector lu opening tag kodkka example in dashboard card selector
+
+ <!-- card1 -->
+    <mat-card>
+        <app-card
+        bg="pink"
+        icon="person"
+        description="student"
+        count=2000  ></app-card>
+    </mat-card>
+
+    and take child tag ts   ie card nte ts
+    html nnu enthu data pass cheyyunnunelum namukk string ayitt aykku kittah
+    thats why we decare in ts
+    
+     bg:string=""
+     icon:string=""
+     description:string=""
+     count:string=""   
+
+
+     so we get data that declared in parent to the child component so we use @input
+
+     @Input() bg:string=""
+     @Input() icon:string=""
+     @Input() description:string=""
+     @Input() count:string=""
+
+     and giv these names int card html  by string interpolation
+
+     div class="card1">
+    <div>
+        <mat-icon class="icon">{{icon}}</mat-icon>
+
+    </div>
+    <div>
+        <h2>{{description}}</h2>
+        <h3>{{count}}</h3>
+    </div>
+</div>
+
+
+
+set card background color by using class property
+class nte property vachitt html nu style kodkkka----use attribute directive
+main tag lu [ngClass]="bg" kodkkah----after this the bg act as a class
+to access a class in here we want to declare that bg in that css(card component nte css lu)
+
+ ngClass used to give a style by using a property of an class
+
+
+
+ ->how to get chart in our page
+    1-get highchart website
+    2-get demo
+    3-open link that given below
+        https://github.com/highcharts/highcharts-angular/blob/master/README.md
+    4-open this project in cmd
+    5-paste it into cmd
+        npm install highcharts-angular --save
+        it from that github link
+        after get "found 0 vulnerabilities"
+    6-import
+    import { HighchartsChartModule } from 'highcharts-angular';
+    7-paste into cmd
+        npm install highcharts --save
+    8-import
+        import * as Highcharts from 'highcharts';
+        to the highchart evdey aahno vendey athinte ts lu---------ie in area-chart TS LU
+    9-area-chart nte html lekk hello demo code paste cheythu
+    10-property bind cheytha two variables html nnu ts lekk paste akki only variables
+    11-and go to highchart website demo and---3d charts--3d column click----view code--
+    12-go to the area chart ts
+            -----you want to view your graph at the time you load the page so you want to  defin it inside a constructer
+    13-continue to step 12 copy some of codes rondom and paste the code inside the constructer object we created
+    14-change the text data uh wanted
+
+
+
+    how to import a table
+    1-import paginator
+    2-import table
+    3-copy code from table from table pagination
+        copy html full---and paste it into table component html
+        copy ts from website and 
+                first import the matters given there
+                second copy paste the line under the export class below the @component to above the @viewchild and paste it into table ts class
+                third also copy  @viewchild and change the type into any after the paginator
+                and copy the below content also
+
+                and copy the export interface and paste it into after the export class closing brace
+                copy elements and paste that into after the export interface
+        copy paste the css also
+
+        

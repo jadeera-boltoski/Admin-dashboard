@@ -1,0 +1,41 @@
+
+.profile{
+    text-align: center;
+
+}
+.profile img{
+    width:140px;
+    height:140px;
+    margin-top: 20px;
+    /* object fit is used to fit that element in that container perfectly */
+    object-fit: contain;
+}
+.profile h3{
+    font-weight: 800;
+    margin-bottom: 0px;
+}
+.profile h4{
+    font-size: medium;
+    /* weight content bold aakunne */
+    font-weight: 200;
+    padding-left: 10px;
+    margin-bottom: 0px;
+}
+
+.pages{
+    display: flex;
+    flex-direction: column;
+}
+.pages a{
+    text-decoration: none;
+    color: black;
+    height: 40px;
+    padding: 10px 0 0 10px;
+}
+
+.pages a:hover{
+    background-color: rgb(58, 62, 121);
+}
+mat-icon{
+    vertical-align: middle;
+}
